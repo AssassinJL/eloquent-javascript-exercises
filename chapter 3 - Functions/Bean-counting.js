@@ -1,9 +1,9 @@
 function countBs(string) {
     var i = 0, count = 0;
     while (i < string.length) {
-	    if (string.charAt(i++) == "B") {
-		    ++count;
-	    }
+		if (string.charAt(i++) == "B") {
+			++count;
+		}
     }
     return count;
 }
