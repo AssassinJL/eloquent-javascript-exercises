@@ -1,4 +1,4 @@
-var s = ""; // maybe width and heigth must be the same
+var s = "";
 var w = Number(prompt("enter width : ", 8));
 var h = Number(prompt("enter height : ", 8));
 for (var i = 1; i <= h; ++i) {
