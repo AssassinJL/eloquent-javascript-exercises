@@ -92,14 +92,14 @@ RTextCell.prototype.draw = function(width, height) {
 // start of StretchCell
 function StretchCell(inner, width, height) {
 	this.inner = inner;
-	this.width = inner.minWidth() > width ? inner.minWidth() : width;
-	this.height = inner.minHeight() > height ? inner.minHeight() : height;
+	this.width = width;
+	this.height = height;
 }
 StretchCell.prototype.minWidth = function() {
-	return this.width;
+	return this.inner.minWidth() > this.width ? this.inner.minWidth() : this.width;
 }
 StretchCell.prototype.minHeight = function() {
-	return this.height;
+	return this.inner.minHeight() > this.height ? this.inner.minHeight() : this.height;
 }
 StretchCell.prototype.draw = function(width, height) {
 	return this.inner.draw(width, height);
